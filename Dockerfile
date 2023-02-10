@@ -4,5 +4,5 @@ FROM rust
 RUN cargo search
 
 RUN rustup component add rustfmt clippy llvm-tools && \
-    cargo install cargo-chef cargo-audit cargo-deny && \
+    cargo install cargo-chef cargo-audit cargo-deny cargo-tarpaulin && \
     rm -rf /usr/local/cargo/registry/cache && rm -rf /usr/local/cargo/registry/src
